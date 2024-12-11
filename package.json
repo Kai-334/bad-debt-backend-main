@@ -1,0 +1,46 @@
+{
+    "name": "bad-debt-backend",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "scripts": {
+        "start": "node --inspect -r ts-node/register ./src/index.ts",
+        "build": "rimraf ./build && tsc && cp package.json ./build/package.json && cp start_all.sh ./build/start_all.sh",
+        "deploy": "npm run build && scp -r -p ./build/* baddebt1:/app/bad-debt-backend",
+        "lint": "eslint . --ext .ts",
+        "lintfix": "eslint . --ext .ts --fix",
+        "prettier-format": "prettier --config .prettierrc \"./src/**/*.ts\" \"./tests/**/*.ts\" --write",
+        "prettier-watch": "onchange \"src/**/*.ts\" \"./tests/**/*.ts\" -- prettier --write {{changed}}",
+        "test": "jest",
+        "typechain": "typechain --target ethers-v6 --out-dir src/contracts/types 'src/contracts/abis/*.abi'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@typechain/ethers-v6": "^0.4.3",
+        "@types/dotenv": "^8.2.0",
+        "@types/jest": "^29.5.11",
+        "@types/node": "^18.19.4",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^8.10.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "jest": "^29.7.0",
+        "onchange": "^7.1.0",
+        "prettier": "^2.8.8",
+        "rimraf": "^4.4.1",
+        "ts-jest": "^29.1.1",
+        "ts-node": "^10.9.2",
+        "typechain": "^8.3.2",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "axios": "^1.6.4",
+        "bignumber.js": "^9.1.2",
+        "dotenv": "^16.4.5",
+        "ethers": "^6.9.2",
+        "json2csv": "^6.0.0-alpha.2",
+        "octokit": "^3.1.2"
+    }
+}

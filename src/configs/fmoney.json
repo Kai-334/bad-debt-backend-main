@@ -1,0 +1,10 @@
+{
+    "comptrollerAddress": "0xB911d8064c0AA338241f349eD802Ad4bae6ec034",
+    "cETHAddresses": ["0x2885D6ECa9F12269A378C76ddECCF90D993CF6d5"],
+    "deployBlock": 78695624,
+    "multicallSize": 100,
+    "multicallParallelSize": 1,
+    "network": "FTM",
+    "nonBorrowableMarkets": [],
+    "rektMarket": []
+}

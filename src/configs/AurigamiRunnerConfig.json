@@ -1,0 +1,10 @@
+{
+    "comptrollerAddress": "0x817af6cfAF35BdC1A634d6cC94eE9e4c68369Aeb",
+    "cETHAddresses": ["0xca9511B610bA5fc7E311FDeF9cE16050eE4449E9"],
+    "deployBlock": 60501454,
+    "multicallSize": 100,
+    "multicallParallelSize": 5,
+    "network": "NEAR",
+    "nonBorrowableMarkets": [],
+    "rektMarket": []
+}
